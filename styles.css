@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+}
+
+#mainDisplay {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  /*margin: 0 10%;*/
+  height: 15%;
+}
+
+.randomStudentDisplay {
+  margin: 0 10%;
+  height: 0;
+  text-align: center;
+  font-weight: 600;
+}
+
+.show {
+  height: 100%;
+  transition: 2s;
+}
+.hide {
+  height: 0;
+  transition: 2s;
+}
+
+/*.show:after {
+  display: block;
+  height: 3px;
+  width: 100%;
+  color: rgba(11,11,11,0.7)
+}*/
+
+#getStudentBtn {
+  margin: 0 10%;
+}
+
+.classBtns {
+  position: absolute;
+  top: 45vh;
+  width: 100%;
+}
+
+.btn {
+  top: 0; /* anchors button during transitions */
+  user-select: none;
+  border: none;
+	border-bottom: 5px solid #1AC5E3;
+  border-radius: 15px;
+  text-align: center;
+	background-color: #38E4F7;
+	filter: drop-shadow(0 7px 3px #446);
+  font-size: 5em;
+  margin: 0 auto;
+  padding: 10px 20px 0;
+  text-transform: uppercase;
+}
+
+.setStudentsBtn {
+  margin: 0 20%;
+}
+
+/* FONT STYLES */
+.lobster {
+  font-family: 'Lobster', cursive;
+}
+.biryani { /* good for buttons */
+  font-family: 'Biryani', sans-serif;
+}
+.abril { /* good for main display */
+  font-family: 'Abril Fatface', cursive;
+}
+.archivo {
+  font-family: 'Archivo Black', sans-serif;
+}
+.white {
+  color: rgba(255,255,255,1.0);
+}
+
+.breakout {
+  font-size: 7em;
+  text-transform: uppercase;
+  background: rgb(135,224,253); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(135,224,253,1) 0%, rgba(198,230,239,1) 38%, rgba(5,171,224,1) 46%, rgba(3,82,104,1) 63%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(135,224,253,1) 0%,rgba(198,230,239,1) 38%,rgba(5,171,224,1) 46%,rgba(3,82,104,1) 63%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(135,224,253,1) 0%,rgba(198,230,239,1) 38%,rgba(5,171,224,1) 46%,rgba(3,82,104,1) 63%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(
+    startColorstr='#87e0fd',
+    endColorstr='#035268',
+    GradientType=0 ); /* IE6-9 */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: contain;
+  line-height: 1.8;
+  filter: drop-shadow(0 2px 1px #000);
+}
+
+.btn-text {
+  font-size: 0.8em;
+  line-height: 1.8;
+  font-weight: bolder;
+  filter: drop-shadow(1px 1px 1px rgba(100,100,100,0.8));
+}
+
+.btn-hover {
+	border-bottom: 3px solid #1AC5E3;
+  filter: drop-shadow(0 5px 2px #446);
+	cursor: pointer;
+	position: relative;
+	top: 2px;
+  transition: 0.3s;
+  color: rgba(200, 200, 255, 0.7)
+}
+
+.btn-click {
+	border-bottom: 1px solid #1AC5E3;
+	filter: drop-shadow(0 0 0 rgba(30,30,60,0.5));
+  box-shadow: 1px 2px 2px rgba(15,15,30,0.7) inset;
+  position: relative;
+	top: 3px;
+  transition: 0.3s;
+}
+
+a {
+  font-size: 6px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+@media screen and (max-height: 700px) {
+  #getStudentBtn {
+    position: relative;
+    top: 0;
+  }
+  mainDisplay {
+    position: relative;
+    top: 10px;
+  }
+  .classBtns {
+    top: 65%;
+  }
+}

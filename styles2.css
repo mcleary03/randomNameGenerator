@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+}
+
+.btn {
+  top: 0; /* anchors button during transitions */
+  user-select: none;
+  border: none;
+	border-bottom: 5px solid #1AC5E3;
+  border-radius: 15px;
+  text-align: center;
+	background-color: #38E4F7;
+	filter: drop-shadow(0 7px 3px #446);
+  font-size: 5em;
+  margin: 0 auto;
+  padding: 10px 20px 0;
+  text-transform: uppercase;
+}
+
+#mainDisplay {
+  width: 100%;
+  height: 50%;
+  outline: 1px solid black;
+}
+
+#changeClass {
+  width: 100%;
+  height: 50%;
+  outline: 1px solid red;
+}
+
+.randomStudentDisplay {
+  position: relative;
+  top: 30%;
+  margin: 0 auto;
+}
+
+.getStudentBtn {
+  position: relative;
+  top: 90%;
+}
