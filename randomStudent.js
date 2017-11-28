@@ -68,9 +68,11 @@ var btns = document.querySelectorAll('.btn')
 btns.forEach( function(btn) {
   btn.addEventListener('mouseover', function(e) {
     this.classList.add('btn-hover')
+    this.children[0].classList.add('text-hover')
   })
   btn.addEventListener('mouseout', function(e) {
     this.classList.remove('btn-hover')
+    this.children[0].classList.remove('text-hover')
   })
   btn.addEventListener('mousedown', function(e) {
     this.classList.add('btn-click')
@@ -80,11 +82,16 @@ btns.forEach( function(btn) {
   })
 })
 
+var themeBtn = document.querySelector('.themeBtn')
+var bodyClasses = document.querySelector('body').classList
+themeBtn.addEventListener('click', function(e) {
+  bodyClasses.toggle('darkbg')
+})
+
 var setStudentsBtn = document.querySelector('.setStudentsBtn')
 setStudentsBtn.addEventListener('click', function(e) {
   setStudents()
   this.innerHTML = `<div class='white archivo btn-text'>${classNames[classIndex%classNames.length]}</div>`
-  
   
   display.classList.remove('show')
   display.classList.add('hide')

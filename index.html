@@ -3,33 +3,31 @@
 <head>
   <meta charset="utf-8">
   <title>Random Student Generator</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Biryani|Lobster|Abril+Fatface|Archivo+Black" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
 </head>
 
-<body>
+<body class="lightbg">
+  <div class="themeSpace">
+    <div class="themeBtn btn">
+      <div class="btn-text">
+        <i class="material-icons">brightness_6</i>
+      </div>
+    </div>
+  </div>
   <div id="mainDisplay">
     <div class="breakout abril randomStudentDisplay"></div>
     <div id='getStudentBtn' class='btn'>
-      <div class='white archivo btn-text'>CLICK ME</div>
+      <div class='archivo btn-text'>CLICK ME</div>
     </div>
   </div>
   <div id='changeClass' class='classBtns'>
     <div class='btn setStudentsBtn'>
-      <div class='white archivo btn-text'>MONDAY / WEDNESDAY</div>
+      <div class='archivo btn-text'>MONDAY / WEDNESDAY</div>
     </div>
   </div>
-  <!-- <div class='classBtns'>
-    <div class='btn setStudentsBtn' name="mw">
-      <div class='breakout btn-text'>MON/WED</div>
-    </div>
-    <div class='btn setStudentsBtn' name="tr">
-      <div class='breakout btn-text'>TUE/THU</div>
-    </div>
-    <div class='btn setStudentsBtn' name="s">
-      <div class='breakout btn-text'>SATURDAY</div>
-    </div>
-  </div> -->
+  
   <script type="text/javascript" src="./randomStudent.js"></script>
 </body>
 </html>

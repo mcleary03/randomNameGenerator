@@ -1,7 +1,37 @@
+/*
+  button blue: rgb(69, 228, 245)
+  button bottom border: rgb(44, 197, 225)
+  button dark blue: rgb(28, 114, 122)
+  button dark border: rgb(22, 98, 112)
+*/
+
 body {
   margin: 0;
   padding: 0;
   font-size: 10px;
+}
+
+.lightbg {
+  background: rgb(255,255,255);
+  transition: 2s;
+}
+
+.darkbg {
+  background: rgb(80,80,80);
+  transition: 2s;
+}
+
+.themeSpace {
+  height: 30px;
+  width: 80px;
+  position: relative;
+  top: 5px;
+  left: 5px;
+  z-index: 100;
+}
+
+#themeBtn {
+  
 }
 
 #mainDisplay {
@@ -9,7 +39,6 @@ body {
   top: 10%;
   left: 0;
   width: 100%;
-  /*margin: 0 10%;*/
   height: 15%;
 }
 
@@ -29,13 +58,6 @@ body {
   transition: 2s;
 }
 
-/*.show:after {
-  display: block;
-  height: 3px;
-  width: 100%;
-  color: rgba(11,11,11,0.7)
-}*/
-
 #getStudentBtn {
   margin: 0 10%;
 }
@@ -47,7 +69,9 @@ body {
 }
 
 .btn {
+  position: relative;
   top: 0; /* anchors button during transitions */
+  bottom: 0;
   user-select: none;
   border: none;
 	border-bottom: 5px solid #1AC5E3;
@@ -58,7 +82,7 @@ body {
   font-size: 5em;
   margin: 0 auto;
   padding: 10px 20px 0;
-  text-transform: uppercase;
+  transition: 0.3s;
 }
 
 .setStudentsBtn {
@@ -77,6 +101,9 @@ body {
 }
 .archivo {
   font-family: 'Archivo Black', sans-serif;
+}
+.offwhite {
+  color: rgba(200,210,225,1.0);
 }
 .white {
   color: rgba(255,255,255,1.0);
@@ -101,28 +128,36 @@ body {
 }
 
 .btn-text {
+  color: rgba(255,255,255,0.8);
+  text-transform: uppercase;
   font-size: 0.8em;
   line-height: 1.8;
   font-weight: bolder;
-  filter: drop-shadow(1px 1px 1px rgba(100,100,100,0.8));
+  filter: drop-shadow(1px 1px 1px rgba(100,100,100,0.2));
+  transition: 0.3s;
+}
+
+.text-hover {
+  color: rgba(255,255,255,1.0);
+  filter: drop-shadow(2px 2px 22px 15px rgba(255,255,255,1.0));
+  transition: 0.3s;
 }
 
 .btn-hover {
 	border-bottom: 3px solid #1AC5E3;
   filter: drop-shadow(0 5px 2px #446);
 	cursor: pointer;
-	position: relative;
-	top: 2px;
+	top: 2px; /* 2px */
+  bottom: 0;
   transition: 0.3s;
-  color: rgba(200, 200, 255, 0.7)
 }
 
 .btn-click {
-	border-bottom: 1px solid #1AC5E3;
+	border-bottom: 0px solid #1AC5E3;
 	filter: drop-shadow(0 0 0 rgba(30,30,60,0.5));
   box-shadow: 1px 2px 2px rgba(15,15,30,0.7) inset;
-  position: relative;
-	top: 3px;
+	top: 5px; /* 3px */
+  bottom: 0;
   transition: 0.3s;
 }
 
@@ -138,11 +173,35 @@ a {
     position: relative;
     top: 0;
   }
-  mainDisplay {
+  #mainDisplay {
     position: relative;
     top: 10px;
   }
   .classBtns {
     top: 65%;
+  }
+}
+
+@media screen and (max-height: 350px) {
+  #mainDisplay {
+    position: absolute;
+    top: 50px;
+    height: 120px;
+  }
+  #changeClass {
+    position: absolute;
+    top: 170px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #mainDisplay {
+    position: absolute;
+    top: 50px;
+    height: 5%;
+  }
+  #changeClass {
+    position: absolute;
+    top: 170px;
   }
 }
