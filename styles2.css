@@ -21,7 +21,7 @@ body {
   text-transform: uppercase;
 }
 
-#mainDisplay {
+#topDisplay {
   width: 100%;
   height: 50%;
   outline: 1px solid black;

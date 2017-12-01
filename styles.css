@@ -4,11 +4,63 @@
   button dark blue: rgb(28, 114, 122)
   button dark border: rgb(22, 98, 112)
 */
+html {
+  height: 100%;
+  width: 100%;
+}
 
 body {
+  cursor: none; /* only for testing animated cursor */
   margin: 0;
   padding: 0;
+  height: 100%;
+  width: 100%;
   font-size: 10px;
+}
+
+.cursorContainer {
+  position: absolute;
+  transform-origin: 80% 90%;
+  z-index: 1000; /* Nothing should be above this */
+}
+.sword {
+  background: url(Master_Sword.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 27px;
+  width: 32px;
+}
+.hammer {
+  background: url(hammer.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 48px;
+  width: 29px;
+}
+.sword-dblclick {
+  animation: 0.3s linear spin;
+}
+.sword-click {
+  animation: 0.3s swing;
+}
+@keyframes spin {
+  0% { 
+    transform: rotate(0); 
+  }
+  100% { 
+    transform: rotate(360deg); 
+  }
+}
+@keyframes swing {
+  0% { 
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(160deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
 }
 
 .lightbg {
@@ -34,7 +86,7 @@ body {
   
 }
 
-#mainDisplay {
+#topDisplay {
   position: absolute;
   top: 10%;
   left: 0;
@@ -76,6 +128,7 @@ body {
   border: none;
 	border-bottom: 5px solid #1AC5E3;
   border-radius: 15px;
+  box-shadow: inset 0 0 1px #7AD5F3;
   text-align: center;
 	background-color: #38E4F7;
 	filter: drop-shadow(0 7px 3px #446);
@@ -173,9 +226,10 @@ a {
     position: relative;
     top: 0;
   }
-  #mainDisplay {
+  #topDisplay {
     position: relative;
     top: 10px;
+    height: 120px;
   }
   .classBtns {
     top: 65%;
@@ -183,7 +237,7 @@ a {
 }
 
 @media screen and (max-height: 350px) {
-  #mainDisplay {
+  #topDisplay {
     position: absolute;
     top: 50px;
     height: 120px;
@@ -194,14 +248,14 @@ a {
   }
 }
 
-@media screen and (max-width: 450px) {
-  #mainDisplay {
+@media screen and (max-height: 400px) {
+  #topDisplay {
     position: absolute;
-    top: 50px;
-    height: 5%;
+    top: 10px;
+    height: 120px;
   }
   #changeClass {
     position: absolute;
-    top: 170px;
+    bottom: 20px;
   }
 }
