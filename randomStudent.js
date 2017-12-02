@@ -64,57 +64,6 @@ document.addEventListener("DOMContentLoaded", function(){
     removeStudent(student)
   })
 
-
-
-  // PRACTICE CUSTOM ANIMATED CURSOR
-  var cursorPosition
-  var cursor = document.querySelector('.cursorContainer')
-  var currentCursor = cursor.children[0].classList[0]
-  var body = document.querySelector('body')
-
-  body.addEventListener('mousemove', function(e) {
-    cursor.style.left = `${e.x}px`
-    cursor.style.top = `${e.y}px`
-    if (e.y < 400 && currentCursor !== 'sword') changeCursor('sword')
-    if (e.y > 400 && currentCursor !== 'hammer') changeCursor('hammer')
-  })
-  
-  var timer
-  var clear
-  var clicks = 0
-  var actionDelay = 160
-  var resetDelay = 400
-  
-  body.addEventListener('click', function(e) {
-    clicks++  //count clicks
-    
-    if(clicks === 1) {
-      timer = setTimeout(function() {
-        cursor.classList.add('sword-click')  //perform single-click action    
-        clicks = 0             //after action performed, reset counter
-      }, actionDelay)
-    } else {
-      clearTimeout(timer);    //prevent single-click action
-      cursor.classList.add('sword-dblclick')  //perform double-click action
-      clicks = 0;             //after action performed, reset counter
-    }
-    clear = setTimeout(function() {
-      cursor.classList.remove('sword-click', 'sword-dblclick')
-    }, resetDelay)
-  })
-  body.addEventListener("dblclick", function(e) {
-    e.preventDefault();  //cancel system double-click event
-  })
-
-  function changeCursor(className) {
-    console.log(cursor.children[0].classList)
-    cursor.children[0].classList = []
-    cursor.children[0].classList.add(className)
-    currentCursor = className
-  }
-
-
-
   // Button Interactions
   var btns = document.querySelectorAll('.btn')
   btns.forEach( function(btn) {
